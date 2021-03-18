@@ -24,7 +24,7 @@ namespace CardGameEngine.Decks
             for (int i = 0; i < Cards.Count; i++)
             {
                 var index = _random.Next(unshuffledCards.Count);
-                shuffledCards.Add(Cards[index]);
+                shuffledCards.Add(unshuffledCards[index]);
                 unshuffledCards.RemoveAt(index);
             }
 
