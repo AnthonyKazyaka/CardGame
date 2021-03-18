@@ -2,7 +2,7 @@
 
 ### To Do
 - [ ] Create a deck that contains 108 cards; two full standard decks plus 4 jokers
-- [ ] Create a shuffling system
+- [x] Create a shuffling system
 - [ ] Create a game
     - [ ] Create a phase system to represent the different hands played and opening conditions
         - [ ] High Pair
