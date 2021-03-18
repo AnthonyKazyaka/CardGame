@@ -18,7 +18,7 @@ namespace CardGameEngine.Cards
 
         public static Card GenerateRandomCard()
         {
-            var suits = Enum..GetNames(typeof(Suit))
+            var suits = Enum.GetNames(typeof(Suit))
                                 .Select(x => (Suit)Enum.Parse(typeof(Suit), x)).ToList();
 
             var ranks = Enum.GetNames(typeof(Rank))
