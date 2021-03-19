@@ -1,7 +1,11 @@
 <Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
-    <TargetFramework>netstandard2.0</TargetFramework>
+    <TargetFramework>netstandard2.1</TargetFramework>
+    <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
+    <Authors>Anthony Kazyaka</Authors>
+    <Company>CardGameEngine</Company>
+    <Version>0.0.1</Version>
   </PropertyGroup>
 
   <ItemGroup>
