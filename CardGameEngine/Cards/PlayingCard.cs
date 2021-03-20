@@ -1,6 +1,6 @@
 ﻿namespace CardGameEngine.Cards
 {
-    public class PlayingCard : Card, IPointValueCard
+    public class PlayingCard : Card, IPlayingCard
     {
         public Suit Suit { get; private set; }
         public Rank Rank { get; private set; }

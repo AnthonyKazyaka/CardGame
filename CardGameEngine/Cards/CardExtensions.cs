@@ -1,11 +1,10 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Text;
+﻿using System.Collections.Generic;
+using System.Linq;
 
 namespace CardGameEngine.Cards
 {
     public static class CardExtensions
     {
-        //public static bool 
+        // public bool IsRunOfSize() ?
     }
 }
