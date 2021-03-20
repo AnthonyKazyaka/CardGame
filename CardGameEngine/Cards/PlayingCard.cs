@@ -10,11 +10,6 @@
             SetValue(suit, rank);
         }
 
-        public int GetPointValue(IPointEvaluator pointEvaluator)
-        {
-            return pointEvaluator.EvaluatePoints(this);
-        }
-
         public void SetValue(Suit suit, Rank rank)
         {
             Suit = suit;
