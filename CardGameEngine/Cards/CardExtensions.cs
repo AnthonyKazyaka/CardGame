@@ -10,6 +10,11 @@ namespace CardGameEngine.Cards
             var playingCards = cards.Cast<IPlayingCard>().ToList();
             var orderedCards = playingCards.OrderBy(x => x.Rank).ToList();
 
+            if (playingCards.GroupBy(x => x.Suit).Count() != 1 || playingCards.GroupBy(x => x.Rank).Count() != playingCards.Count)
+            {
+                return false;
+            }
+
             if (orderedCards.FirstOrDefault().Rank == Rank.Ace && !orderedCards.Any(x => x.Rank == Rank.Two))
             {
                 orderedCards.Add(orderedCards.First());
