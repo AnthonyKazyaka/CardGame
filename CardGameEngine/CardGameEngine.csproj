@@ -5,7 +5,7 @@
     <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
     <Authors>Anthony Kazyaka</Authors>
     <Company>CardGameEngine</Company>
-    <Version>0.0.1</Version>
+    <Version>0.0.3</Version>
   </PropertyGroup>
 
   <ItemGroup>

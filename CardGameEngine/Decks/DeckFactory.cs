@@ -7,9 +7,9 @@ namespace CardGameEngine.Decks
     {
         private List<IDeckGenerator> _deckGenerators;
 
-        public DeckFactory(List<IDeckGenerator> deckGenerators)
+        public DeckFactory(IEnumerable<IDeckGenerator> deckGenerators)
         {
-            _deckGenerators = deckGenerators;
+            _deckGenerators = deckGenerators.ToList();
         }
 
         public Deck GenerateDeck(DeckType deckType)
