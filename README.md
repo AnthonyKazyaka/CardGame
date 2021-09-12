@@ -13,6 +13,7 @@
         - [ ] Four of a Kind
         - [ ] Straight Flush
         - [ ] All Down
+    - [ ] BONUS: Create an alternate game flow where each player can just consecutively achieve each opening condition until they eventually put down all of their cards
     - [ ] Dealer and the player with the first turn are rotated after each hand
     - [ ] Players must be dealt cards
     - [ ] Players must be able to select a card to pickup
