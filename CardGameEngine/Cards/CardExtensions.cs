@@ -30,10 +30,7 @@ namespace CardGameEngine.Cards
             return isMatch;
         }
 
-        public static bool IsRunOfSize(this List<Card> cards, int size)
-        {
-            return cards.Count == size && IsRun(cards);
-        }
+        public static bool IsRunOfSize(this List<Card> cards, int size) => cards.Count == size && IsRun(cards);
 
         public static bool IsSet(this List<Card> cards)
         {
@@ -41,9 +38,10 @@ namespace CardGameEngine.Cards
             return playingCards.All(x => x.Rank == playingCards.First().Rank) && playingCards.GroupBy(x=>x.Suit).Count() == playingCards.Count;
         }
 
-        public static bool IsSetOfSize(this List<Card> cards, int size)
-        {
-            return cards.Count == size && IsSet(cards);
-        }
+        public static bool IsSetOfSize(this List<Card> cards, int size) => cards.Count == size && IsSet(cards);
+
+        public static bool IsJokerPresent(this List<Card> cards) => GetJokerCount(cards) > 0;
+
+        public static int GetJokerCount(this List<Card> cards) => cards.OfType<Joker>().Count();
     }
 }

@@ -4,15 +4,16 @@
 - [ ] Create a deck that contains 108 cards; two full standard decks plus 4 jokers
 - [x] Create a shuffling system
 - [ ] Create a game
-    - [ ] Create a phase system to represent the different hands played and opening conditions
-        - [ ] High Pair
-        - [ ] Two Pair
-        - [ ] Three of a Kind
-        - [ ] Full House
-        - [ ] Forty
-        - [ ] Four of a Kind
-        - [ ] Straight Flush
-        - [ ] All Down
+    - [x] Create a phase system to represent the different hands played and opening conditions
+        - [x] High Pair
+        - [x] Two Pair
+        - [x] Three of a Kind
+        - [x] Full House
+        - [x] Forty
+        - [x] Four of a Kind
+        - [x] Straight Flush
+        - [x] All Down
+    - [ ] Write tests for each opening condition
     - [ ] BONUS: Create an alternate game flow where each player can just consecutively achieve each opening condition until they eventually put down all of their cards
     - [ ] Dealer and the player with the first turn are rotated after each hand
     - [ ] Players must be dealt cards
