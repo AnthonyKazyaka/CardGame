@@ -41,7 +41,7 @@ namespace CardGameEngine.Cards.Tests
         public void IsSet_SameSuit(params Rank[] cardRanks)
         {
             var suit = Suit.Clubs;
-            var cards = Enumerable.Range(0, cardRanks.Count()).Select(x => new PlayingCard(suit, cardRanks[x])).Cast<Card>().ToList();
+            var cards = Enumerable.Range(0, cardRanks.Count()).Select(x => new PlayingCard(suit, cardRanks[x])).Cast<IPlayingCard>().ToList();
 
             Assert.False(cards.IsSet());
         }
@@ -52,7 +52,7 @@ namespace CardGameEngine.Cards.Tests
         [InlineData(false, Rank.Jack, Rank.Eight, Rank.Four)]
         public void IsSet_DifferentSuits(bool isSet, params Rank[] cardRanks)
         {
-            var cards = new List<Card>();
+            var cards = new List<IPlayingCard>();
             for(var i = 0; i < cardRanks.Length; i++)
             {
                 cards.Add(new PlayingCard((Suit)i, cardRanks[i]));
@@ -70,7 +70,7 @@ namespace CardGameEngine.Cards.Tests
         [InlineData(true, Rank.Two, Rank.Two)]
         public void IsSetOfSize_ImplicitSize_DifferentSuits(bool isSet, params Rank[] cardRanks)
         {
-            var cards = new List<Card>();
+            var cards = new List<IPlayingCard>();
             for (var i = 0; i < cardRanks.Length; i++)
             {
                 cards.Add(new PlayingCard((Suit)(i % 4), cardRanks[i]));
@@ -92,7 +92,7 @@ namespace CardGameEngine.Cards.Tests
         [InlineData(true, 2, Rank.Two, Rank.Two)]
         public void IsSetOfSize_ExplicitSize_DifferentSuits(bool isSet, int size, params Rank[] cardRanks)
         {
-            var cards = new List<Card>();
+            var cards = new List<IPlayingCard>();
             for (var i = 0; i < cardRanks.Length; i++)
             {
                 cards.Add(new PlayingCard((Suit)(i % 4), cardRanks[i]));
@@ -109,7 +109,7 @@ namespace CardGameEngine.Cards.Tests
         public void IsRun_SameSuit(bool isRun, params Rank[] cardRanks)
         {
             var suit = Suit.Clubs;
-            var cards = Enumerable.Range(0, cardRanks.Count()).Select(x => new PlayingCard(suit, cardRanks[x])).Cast<Card>().ToList();
+            var cards = Enumerable.Range(0, cardRanks.Count()).Select(x => new PlayingCard(suit, cardRanks[x])).Cast<IPlayingCard>().ToList();
 
             Assert.Equal(isRun, cards.IsRun());
         }
@@ -121,7 +121,7 @@ namespace CardGameEngine.Cards.Tests
         [InlineData(Rank.Eight, Rank.Seven, Rank.Nine)]
         public void IsRun_DifferentSuits(params Rank[] cardRanks)
         {
-            var cards = new List<Card>();
+            var cards = new List<IPlayingCard>();
             for (var i = 0; i < cardRanks.Length; i++)
             {
                 cards.Add(new PlayingCard((Suit)i, cardRanks[i]));
@@ -139,7 +139,7 @@ namespace CardGameEngine.Cards.Tests
         [InlineData(Rank.Two, Rank.Two)]
         public void IsRunOfSize_ImplicitSize_DifferentSuits(params Rank[] cardRanks)
         {
-            var cards = new List<Card>();
+            var cards = new List<IPlayingCard>();
             for (var i = 0; i < cardRanks.Length; i++)
             {
                 cards.Add(new PlayingCard((Suit)(i % 4), cardRanks[i]));
@@ -161,7 +161,7 @@ namespace CardGameEngine.Cards.Tests
         public void IsRunOfSize_ExplicitSize_SameSuit(bool isRun, int size, params Rank[] cardRanks)
         {
             var suit = Suit.Clubs;
-            var cards = Enumerable.Range(0, cardRanks.Count()).Select(x => new PlayingCard(suit, cardRanks[x])).Cast<Card>().ToList();
+            var cards = Enumerable.Range(0, cardRanks.Count()).Select(x => new PlayingCard(suit, cardRanks[x])).Cast<IPlayingCard>().ToList();
 
             Assert.Equal(isRun, cards.IsRunOfSize(size));
         }

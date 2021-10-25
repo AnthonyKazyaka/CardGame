@@ -6,19 +6,19 @@ namespace CardGameEngine.Decks
 {
     public class Deck
     {
-        public List<Card> Cards { get; private set; }
+        public List<IPlayingCard> Cards { get; private set; }
 
         private static Random _random { get; } = new Random();
 
-        public Deck(List<Card> cards)
+        public Deck(List<IPlayingCard> cards)
         {
             Cards = cards;
         }
 
         public void Shuffle()
         {
-            List<Card> unshuffledCards = new List<Card>(Cards);
-            List<Card> shuffledCards = new List<Card>();
+            List<IPlayingCard> unshuffledCards = new List<IPlayingCard>(Cards);
+            List<IPlayingCard> shuffledCards = new List<IPlayingCard>();
 
             for (int i = 0; i < Cards.Count; i++)
             {

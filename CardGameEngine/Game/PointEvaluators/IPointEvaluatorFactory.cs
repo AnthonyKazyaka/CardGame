@@ -2,6 +2,6 @@
 {
     public interface IPointEvaluatorFactory
     {
-        IPointEvaluator GetPointEvaluator(string evaluatorName);
+        IPointEvaluator GetPointEvaluator(string evaluatorTypeName);
     }
 }

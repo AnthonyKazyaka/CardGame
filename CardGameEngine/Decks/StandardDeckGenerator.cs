@@ -18,7 +18,7 @@ namespace CardGameEngine.Decks
 
             var cards = suits.Join(ranks, (Suit x) => true, (Rank y) => true, (Suit x, Rank y) => new PlayingCard(x, y)).ToList();
 
-            return new Deck(cards.Cast<Card>().ToList());
+            return new Deck(cards.Cast<IPlayingCard>().ToList());
         }
     }
 }
