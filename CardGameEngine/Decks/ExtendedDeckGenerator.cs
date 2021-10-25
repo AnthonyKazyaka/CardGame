@@ -16,7 +16,7 @@ namespace CardGameEngine.Decks
             var suits = suitNames.Select(x => (Suit)Enum.Parse(typeof(Suit), x));
             var ranks = rankNames.Select(x => (Rank)Enum.Parse(typeof(Rank), x));
 
-            var cards = suits.Join(ranks, (Suit x) => true, (Rank y) => true, (Suit x, Rank y) => new PlayingCard(x, y)).Cast<Card>().ToList();
+            var cards = suits.Join(ranks, (Suit x) => true, (Rank y) => true, (Suit x, Rank y) => new PlayingCard(x, y)).Cast<IPlayingCard>().ToList();
 
             cards.AddRange(new[] { new Joker(), new Joker() });
 

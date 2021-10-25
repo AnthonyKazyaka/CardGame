@@ -5,6 +5,6 @@ namespace CardGameEngine.Game.PointEvaluators
 {
     public interface IPointEvaluator
     {
-        int EvaluatePoints(List<Card> cards);
+        int EvaluatePoints(List<IPlayingCard> cards);
     }
 }

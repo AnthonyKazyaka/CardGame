@@ -5,12 +5,11 @@ namespace CardGameEngine.Cards
 {
     public static class CardExtensions
     {
-        public static bool IsRun(this List<Card> cards)
+        public static bool IsRun(this List<IPlayingCard> cards)
         {
-            var playingCards = cards.Cast<IPlayingCard>().ToList();
-            var orderedCards = playingCards.OrderBy(x => x.Rank).ToList();
+            var orderedCards = cards.OrderBy(x => x.Rank).ToList();
 
-            if (playingCards.GroupBy(x => x.Suit).Count() != 1 || playingCards.GroupBy(x => x.Rank).Count() != playingCards.Count)
+            if (cards.GroupBy(x => x.Suit).Count() != 1 || cards.GroupBy(x => x.Rank).Count() != cards.Count)
             {
                 return false;
             }
@@ -30,18 +29,17 @@ namespace CardGameEngine.Cards
             return isMatch;
         }
 
-        public static bool IsRunOfSize(this List<Card> cards, int size) => cards.Count == size && IsRun(cards);
+        public static bool IsRunOfSize(this List<IPlayingCard> cards, int size) => cards.Count == size && IsRun(cards);
 
-        public static bool IsSet(this List<Card> cards)
+        public static bool IsSet(this List<IPlayingCard> cards)
         {
-            var playingCards = cards.Cast<IPlayingCard>().ToList();
-            return playingCards.All(x => x.Rank == playingCards.First().Rank) && playingCards.GroupBy(x=>x.Suit).Count() == playingCards.Count;
+            return cards.All(x => x.Rank == cards.First().Rank) && cards.GroupBy(x=>x.Suit).Count() == cards.Count;
         }
 
-        public static bool IsSetOfSize(this List<Card> cards, int size) => cards.Count == size && IsSet(cards);
+        public static bool IsSetOfSize(this List<IPlayingCard> cards, int size) => cards.Count == size && IsSet(cards);
 
-        public static bool IsJokerPresent(this List<Card> cards) => GetJokerCount(cards) > 0;
+        public static bool IsJokerPresent(this List<IPlayingCard> cards) => GetJokerCount(cards) > 0;
 
-        public static int GetJokerCount(this List<Card> cards) => cards.OfType<Joker>().Count();
+        public static int GetJokerCount(this List<IPlayingCard> cards) => cards.OfType<Joker>().Count();
     }
 }
