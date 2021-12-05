@@ -15,5 +15,26 @@
             Suit = suit;
             Rank = rank;
         }
+
+        public override string ToString()
+        {
+            string rankString = string.Empty;
+            string suitString = Suit.ToString()[..1];
+
+            if (Rank >= Rank.Two && Rank <= Rank.Ten)
+            {
+                rankString = ((int)Rank).ToString();
+            }
+            else if (Rank >= Rank.Jack)
+            {
+                rankString = Rank.ToString()[..1];
+            }
+            else if (Rank == Rank.Ace)
+            {
+                rankString = "A";
+            }
+
+            return rankString + suitString;
+        }
     }
 }
