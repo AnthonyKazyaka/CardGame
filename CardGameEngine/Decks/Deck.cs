@@ -1,6 +1,7 @@
 ﻿using CardGameEngine.Cards;
 using System;
 using System.Collections.Generic;
+using System.Linq;
 
 namespace CardGameEngine.Decks
 {
@@ -15,7 +16,7 @@ namespace CardGameEngine.Decks
             Cards = cards;
         }
 
-        public void Shuffle()
+        public virtual void Shuffle()
         {
             List<IPlayingCard> unshuffledCards = new List<IPlayingCard>(Cards);
             List<IPlayingCard> shuffledCards = new List<IPlayingCard>();
@@ -30,5 +31,16 @@ namespace CardGameEngine.Decks
             Cards = shuffledCards;
         }
 
+        public virtual IPlayingCard DrawCard()
+        {
+            IPlayingCard card = Cards.FirstOrDefault();
+            if (card == null)
+            {
+                throw new IndexOutOfRangeException();
+            }
+
+            Cards.RemoveAt(0);
+            return card;
+        }
     }
 }
