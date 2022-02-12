@@ -1,11 +1,17 @@
 ﻿using CardGameEngine.Cards;
+using System;
 using System.Collections.Generic;
 
 namespace CardGameEngine.Players
 {
     public class Player
     {
+<<<<<<< Updated upstream
         public string Name { get; set; }
+=======
+        public string Name { get; }
+        public Guid PlayerId { get; } = Guid.NewGuid();
+>>>>>>> Stashed changes
         public int Score { get; set; }
         public List<IPlayingCard> Hand { get; set; } = new List<IPlayingCard>();
 
@@ -13,6 +19,7 @@ namespace CardGameEngine.Players
         {
             Name = name;
         }
+<<<<<<< Updated upstream
 
         public void AddCard(IPlayingCard card)
         {
@@ -55,5 +62,7 @@ namespace CardGameEngine.Players
             ResetScore();
             ResetHand();
         }
+=======
+>>>>>>> Stashed changes
     }
 }
