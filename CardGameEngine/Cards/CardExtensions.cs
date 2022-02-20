@@ -44,12 +44,13 @@ namespace CardGameEngine.Cards
 
         public static IPlayingCard SelectCard(this List<IPlayingCard> cards, IPlayingCard card)
         {
+            var returnCards = new List<IPlayingCard>();
             if(card is Joker)
             {
                 return cards.First(x => x is Joker);
             }
 
-            return cards.First(x =>x.Rank == card.Rank && x.Suit == card.Suit);
+            return cards.First(x => !(x is Joker) && (x.Rank == card.Rank && x.Suit == card.Suit));
         }
 
         public static string ToString(this List<IPlayingCard> cards) => string.Join(", ", cards.Select(x => x.ToString()));
