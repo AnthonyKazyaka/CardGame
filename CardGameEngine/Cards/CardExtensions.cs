@@ -41,5 +41,18 @@ namespace CardGameEngine.Cards
         public static bool IsJokerPresent(this List<IPlayingCard> cards) => GetJokerCount(cards) > 0;
 
         public static int GetJokerCount(this List<IPlayingCard> cards) => cards.OfType<Joker>().Count();
+
+        public static IPlayingCard SelectCard(this List<IPlayingCard> cards, IPlayingCard card)
+        {
+            if(card is Joker)
+            {
+                return cards.First(x => x is Joker);
+            }
+
+            return cards.First(x =>x.Rank == card.Rank && x.Suit == card.Suit);
+        }
+
+        public static string ToString(this List<IPlayingCard> cards) => string.Join(", ", cards.Select(x => x.ToString()));
+        public static List<IPlayingCard> FromString(this List<string> cardValues) => cardValues.Select(IPlayingCard.FromString).ToList();
     }
 }

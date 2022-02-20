@@ -31,7 +31,6 @@ namespace CardGameEngine.Decks
             Cards = shuffledCards;
         }
 
-<<<<<<< Updated upstream
         public virtual IPlayingCard DrawCard()
         {
             IPlayingCard card = Cards.FirstOrDefault();
@@ -42,14 +41,6 @@ namespace CardGameEngine.Decks
 
             Cards.RemoveAt(0);
             return card;
-=======
-
-        public IPlayingCard DrawCard()
-        {
-            var topCard = Cards.First();
-            Cards.RemoveAt(0);
-            return topCard;
->>>>>>> Stashed changes
         }
     }
 }
