@@ -1,13 +1,11 @@
 <Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
-    <TargetFramework>netstandard2.1</TargetFramework>
-    <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
-    <Authors>Anthony Kazyaka</Authors>
-    <Company>CardGameEngine</Company>
-    <Version>0.1.8</Version>
-    <AssemblyVersion>0.1.8.0</AssemblyVersion>
-    <FileVersion>0.1.8.0</FileVersion>
+    <TargetFramework>net6.0</TargetFramework>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+    <GeneratePackageOnBuild>True</GeneratePackageOnBuild>
+    <Version>0.2.0</Version>
   </PropertyGroup>
 
   <ItemGroup>

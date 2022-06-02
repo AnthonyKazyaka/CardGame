@@ -19,8 +19,4 @@
     </PackageReference>
   </ItemGroup>
 
-  <ItemGroup>
-    <ProjectReference Include="..\..\CardGameEngine\CardGameEngine.csproj" />
-  </ItemGroup>
-
 </Project>
