@@ -5,9 +5,15 @@ VisualStudioVersion = 17.1.32421.90
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Tests", "Tests", "{3D0EFCDA-5E55-4302-AADC-3A1308599C70}"
 EndProject
+<<<<<<< HEAD
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CardGame.Cards.Tests", "Tests\CardGame.Cards.Tests\CardGame.Cards.Tests.csproj", "{AE19FDA4-69CC-46E4-9638-CE817520067D}"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CardGame", "CardGame\CardGame.csproj", "{C5FBC3FB-AF48-4BF6-B7A4-067BC5473C3D}"
+=======
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CardGame.Cards.Tests", "Tests\CardGameEngine.Cards.Tests\CardGame.Cards.Tests.csproj", "{AE19FDA4-69CC-46E4-9638-CE817520067D}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CardGame", "CardGameEngine\CardGame.csproj", "{C5FBC3FB-AF48-4BF6-B7A4-067BC5473C3D}"
+>>>>>>> 6246fb2 (Rename project)
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
