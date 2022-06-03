@@ -1,8 +1,4 @@
-<<<<<<< HEAD:CardGame/Extensions/IListExtensions.cs
 namespace CardGame.Extensions
-=======
-namespace CardGameEngine.Extensions
->>>>>>> 6246fb2 (Rename project):CardGameEngine/Extensions/IListExtensions.cs
 {
     public static class IListExtensions
     {

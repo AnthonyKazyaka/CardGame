@@ -25,13 +25,5 @@
             
             return base.Equals(obj);
         }
-
-        public override string ToString()
-        {
-            var suitRepresentation = Suit.ToString().First();
-            var rankRepresentation = (Rank == Rank.Ace || Rank > Rank.Ten) ? Rank.ToString().First().ToString() : ((int)Rank).ToString();
-
-            return $"{rankRepresentation}{suitRepresentation}";
-        }
     }
 }

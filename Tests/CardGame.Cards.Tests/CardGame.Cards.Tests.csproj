@@ -20,11 +20,7 @@
   </ItemGroup>
 
   <ItemGroup>
-<<<<<<< HEAD:Tests/CardGame.Cards.Tests/CardGame.Cards.Tests.csproj
     <ProjectReference Include="..\..\CardGame\CardGame.csproj" />
-=======
-    <ProjectReference Include="..\..\CardGameEngine\CardGame.csproj" />
->>>>>>> 6246fb2 (Rename project):Tests/CardGameEngine.Cards.Tests/CardGame.Cards.Tests.csproj
   </ItemGroup>
 
 </Project>
