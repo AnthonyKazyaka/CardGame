@@ -12,5 +12,19 @@
         {
             RepresentedCard = new PlayingCard(suit, rank);
         }
+
+        public override bool Equals(object? obj)
+        {
+            if (obj is Joker joker)
+            {
+                return true;
+            }
+            else if(obj is PlayingCard card)
+            {
+                return card.Equals(RepresentedCard);
+            }
+
+            return base.Equals(obj);
+        }
     }
 }

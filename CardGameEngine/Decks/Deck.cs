@@ -1,6 +1,5 @@
 ﻿using CardGameEngine.Cards;
-using System;
-using System.Collections.Generic;
+using CardGameEngine.Extensions;
 
 namespace CardGameEngine.Decks
 {
@@ -17,18 +16,14 @@ namespace CardGameEngine.Decks
 
         public void Shuffle()
         {
-            List<IPlayingCard> unshuffledCards = new List<IPlayingCard>(Cards);
-            List<IPlayingCard> shuffledCards = new List<IPlayingCard>();
-
-            for (int i = 0; i < Cards.Count; i++)
-            {
-                var index = _random.Next(unshuffledCards.Count);
-                shuffledCards.Add(unshuffledCards[index]);
-                unshuffledCards.RemoveAt(index);
-            }
-
-            Cards = shuffledCards;
+            Cards.Shuffle();
         }
 
+        public IPlayingCard Draw()
+        {
+            var card = Cards.First();
+            Cards.Remove(card);
+            return card;
+        }
     }
 }

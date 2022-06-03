@@ -15,5 +15,15 @@
             Suit = suit;
             Rank = rank;
         }
+
+        public override bool Equals(object? obj)
+        {
+            if (obj is PlayingCard card)
+            {
+                return card.Suit == Suit && card.Rank == Rank;
+            }
+            
+            return base.Equals(obj);
+        }
     }
 }

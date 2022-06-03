@@ -20,7 +20,7 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\..\CardGameEngine\CardGameEngine.csproj" />
+    <ProjectReference Include="..\..\CardGameEngine\CardGame.csproj" />
   </ItemGroup>
 
 </Project>

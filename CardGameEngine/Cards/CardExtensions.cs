@@ -5,7 +5,17 @@ namespace CardGameEngine.Cards
 {
     public static class CardExtensions
     {
-        public static bool IsRun(this List<IPlayingCard> cards)
+        public static IPlayingCard SelectCard(this IEnumerable<IPlayingCard> cards, Suit suit, Rank rank)
+        {
+            return cards.First(c => c.Suit == suit && c.Rank == rank);
+        }
+
+        public static IPlayingCard SelectCard(this IEnumerable<IPlayingCard> cards, IPlayingCard card)
+        {
+            return cards.First(c => c.Equals(card));
+        }
+
+        public static bool IsRun(this IList<IPlayingCard> cards)
         {
             var orderedCards = cards.OrderBy(x => x.Rank).ToList();
 
@@ -29,17 +39,17 @@ namespace CardGameEngine.Cards
             return isMatch;
         }
 
-        public static bool IsRunOfSize(this List<IPlayingCard> cards, int size) => cards.Count == size && IsRun(cards);
+        public static bool IsRunOfSize(this IList<IPlayingCard> cards, int size) => cards.Count == size && IsRun(cards);
 
-        public static bool IsSet(this List<IPlayingCard> cards)
+        public static bool IsSet(this IList<IPlayingCard> cards)
         {
             return cards.All(x => x.Rank == cards.First().Rank) && cards.GroupBy(x=>x.Suit).Count() == cards.Count;
         }
 
-        public static bool IsSetOfSize(this List<IPlayingCard> cards, int size) => cards.Count == size && IsSet(cards);
+        public static bool IsSetOfSize(this IList<IPlayingCard> cards, int size) => cards.Count == size && IsSet(cards);
 
-        public static bool IsJokerPresent(this List<IPlayingCard> cards) => GetJokerCount(cards) > 0;
+        public static bool IsJokerPresent(this IList<IPlayingCard> cards) => GetJokerCount(cards) > 0;
 
-        public static int GetJokerCount(this List<IPlayingCard> cards) => cards.OfType<Joker>().Count();
+        public static int GetJokerCount(this IList<IPlayingCard> cards) => cards.OfType<Joker>().Count();
     }
 }
