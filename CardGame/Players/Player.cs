@@ -1,7 +1,7 @@
-﻿using CardGameEngine.Cards;
+﻿using CardGame.Cards;
 using System.Collections.Generic;
 
-namespace CardGameEngine.Players
+namespace CardGame.Players
 {
     public class Player
     {

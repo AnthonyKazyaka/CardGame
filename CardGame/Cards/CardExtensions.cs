@@ -1,7 +1,7 @@
 ﻿using System.Collections.Generic;
 using System.Linq;
 
-namespace CardGameEngine.Cards
+namespace CardGame.Cards
 {
     public static class CardExtensions
     {

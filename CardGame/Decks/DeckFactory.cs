@@ -1,7 +1,7 @@
 ﻿using System.Collections.Generic;
 using System.Linq;
 
-namespace CardGameEngine.Decks
+namespace CardGame.Decks
 {
     public class DeckFactory : IDeckFactory
     {

@@ -1,4 +1,4 @@
-﻿namespace CardGameEngine.Decks
+﻿namespace CardGame.Decks
 {
     public interface IDeckFactory
     {

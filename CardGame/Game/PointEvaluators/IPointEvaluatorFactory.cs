@@ -1,4 +1,4 @@
-﻿namespace CardGameEngine.Game.PointEvaluators
+﻿namespace CardGame.Game.PointEvaluators
 {
     public interface IPointEvaluatorFactory
     {

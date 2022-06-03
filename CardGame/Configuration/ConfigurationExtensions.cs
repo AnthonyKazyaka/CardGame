@@ -1,11 +1,11 @@
-﻿using CardGameEngine.Decks;
+﻿using CardGame.Decks;
 using Microsoft.Extensions.DependencyInjection;
 
-namespace CardGameEngine.Configuration
+namespace CardGame.Configuration
 {
     public static class ConfigurationExtensions
     {
-        public static void ConfigureCardGameEngineDependencies(this IServiceCollection serviceCollection)
+        public static void ConfigureCardGameDependencies(this IServiceCollection serviceCollection)
         {
             serviceCollection.AddTransient<IDeckGenerator, StandardDeckGenerator>();
             serviceCollection.AddTransient<IDeckGenerator, ExtendedDeckGenerator>();

@@ -1,8 +1,8 @@
-﻿using CardGameEngine.Cards;
+﻿using CardGame.Cards;
 using System;
 using System.Linq;
 
-namespace CardGameEngine.Decks
+namespace CardGame.Decks
 {
     public class StandardDeckGenerator : IDeckGenerator
     {

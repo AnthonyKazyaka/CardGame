@@ -1,7 +1,7 @@
-﻿using CardGameEngine.Cards;
+﻿using CardGame.Cards;
 using System.Collections.Generic;
 
-namespace CardGameEngine.Game.PointEvaluators
+namespace CardGame.Game.PointEvaluators
 {
     public interface IPointEvaluator
     {

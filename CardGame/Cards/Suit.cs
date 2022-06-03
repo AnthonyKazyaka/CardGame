@@ -1,4 +1,4 @@
-﻿namespace CardGameEngine.Cards
+﻿namespace CardGame.Cards
 {
     public enum Suit
     {

@@ -1,7 +1,7 @@
-﻿using CardGameEngine.Cards;
-using CardGameEngine.Extensions;
+﻿using CardGame.Cards;
+using CardGame.Extensions;
 
-namespace CardGameEngine.Decks
+namespace CardGame.Decks
 {
     public class Deck
     {

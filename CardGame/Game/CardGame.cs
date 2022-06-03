@@ -1,4 +1,4 @@
-﻿namespace CardGameEngine.Game
+﻿namespace CardGame.Game
 {
     public abstract class CardGame : ICardGame
     {

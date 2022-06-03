@@ -1,9 +1,9 @@
-using CardGameEngine.Cards;
+using CardGame.Cards;
 using System.Collections.Generic;
 using System.Linq;
 using Xunit;
 
-namespace CardGameEngine.Cards.Tests
+namespace CardGame.Cards.Tests
 {
     public class CardExtensionTests
     {
