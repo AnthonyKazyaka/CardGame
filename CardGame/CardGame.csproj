@@ -5,11 +5,7 @@
     <ImplicitUsings>enable</ImplicitUsings>
     <Nullable>enable</Nullable>
     <GeneratePackageOnBuild>True</GeneratePackageOnBuild>
-<<<<<<< HEAD:CardGame/CardGame.csproj
-    <Version>0.2.4</Version>
-=======
-    <Version>0.2.1</Version>
->>>>>>> 6246fb2 (Rename project):CardGameEngine/CardGame.csproj
+    <Version>0.2.2</Version>
   </PropertyGroup>
 
   <ItemGroup>
