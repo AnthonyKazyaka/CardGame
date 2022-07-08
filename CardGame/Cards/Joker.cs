@@ -26,5 +26,10 @@
 
             return base.Equals(obj);
         }
+
+        public override string ToString()
+        {
+            return "J*";
+        }
     }
 }

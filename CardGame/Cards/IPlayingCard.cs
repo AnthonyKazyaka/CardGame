@@ -27,11 +27,29 @@
 
         static (Suit suit, Rank rank) GetSuitAndRank(string value)
         {
-            var suitValue = value[0];
-            var rankValue = value[1..];
+            // TODO: Make this method better
+            var suitValue = value.First().ToString().ToUpperInvariant();
+            var rankValue = value.Substring(0, value.Length - 1);
 
-            var suit = (Suit)Enum.Parse(typeof(Suit), suitValue.ToString());
-            var rank = (Rank)Enum.Parse(typeof(Rank), rankValue.ToString());
+            // Get suit from character representation in the string
+            var suit = suitValue switch{
+                "H" => Suit.Hearts,
+                "D" => Suit.Diamonds,
+                "S" => Suit.Spades,
+                "C" => Suit.Clubs,
+                _ => throw new ArgumentOutOfRangeException(nameof(suitValue), suitValue, "Invalid suit")
+            };
+
+            // Get rank from string representation
+            var rank = rankValue switch
+            {
+                "A" => Rank.Ace,
+                "J" => Rank.Jack,
+                "Q" => Rank.Queen,
+                "K" => Rank.King,
+                // if value is 2 through 10, its rank is a number
+                _ => (Rank)int.Parse(rankValue)
+            };
 
             return (suit, rank);
         }
