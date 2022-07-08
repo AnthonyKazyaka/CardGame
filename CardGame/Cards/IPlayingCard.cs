@@ -28,7 +28,7 @@
         static (Suit suit, Rank rank) GetSuitAndRank(string value)
         {
             // TODO: Make this method better
-            var suitValue = value.First().ToString().ToUpperInvariant();
+            var suitValue = value.Last().ToString().ToUpper();
             var rankValue = value.Substring(0, value.Length - 1);
 
             // Get suit from character representation in the string
